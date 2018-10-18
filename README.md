@@ -1,1 +1,1 @@
-# vivkepro
+# Colleges Data to Store and Retrieve onto JSP from Azure Cosmos DB

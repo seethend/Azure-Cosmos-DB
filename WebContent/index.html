@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Colleges!!!</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <script type="text/javascript" src="index.js"></script>
+        
+    </head>
+    <body>
+
+        <div class="container main-div">
+            <div class="row send-form">
+                <div class="col-md-4 col-md-offset-4 details-div">
+                    <fieldset>
+                        <legend>Give Details</legend>
+                        <input id="uname" type="text" name="uname" placeholder="Name"><br>
+                        <select id="prev-clg" name="prev-clg">
+                            <option>B.E</option>
+                            <option>B.Tech</option>
+                            <option>M.Tech</option>
+                        </select><br>
+                        <input class="gender" type="radio" name="gender" value="male"> Male
+                        <input class="gender" type="radio" name="gender" value="female"> Female<br>
+                        <select id="area-of-int" name="area-of-int">
+                            <option>Electronics</option>
+                            <option>Computer Science</option>
+                            <option>Electrical</option>
+                        </select><br>
+                        <select id="location" name="location">
+                            <option>California</option>
+                            <option>Texas</option>
+                            <option>North Carolina</option>
+                        </select><br>
+                        <p>0$-100000$</p>
+                        <input id="tution" type="range" min="0" max="100000" step="1000" name="tution" onchange="showValue(this.value)" />
+                        <input id="tutionvalue" type="text" value="0$" name="tutionvalue" readonly><br>
+                        <button class="btn btn-primary" onclick="getColleges()">Show Colleges</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+
+        <div id="show-colleges" class="container">
+			<p>Colleges List</p>
+			<table class="table table-bordered">
+			    <thead>
+			        <tr>
+			            <th>S.no</th>
+			            <th>College Name</th>
+			            <th>College Location</th>
+			            <th>Other Courses</th>
+			            <th>Tution Fees</th>
+			        </tr>
+			    </thead>
+			    <tbody id="table-body">
+			    	
+			    </tbody>
+			</table>
+        </div>
+
+    </body>
+</html>
